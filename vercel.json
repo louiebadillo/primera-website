@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/renovation", "destination": "/renovation.html" },
+    { "source": "/gallery", "destination": "/application.html" }
+  ]
+}

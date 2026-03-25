@@ -2,9 +2,24 @@
 ==================== JS INDEX ======================
 ****************************************************/
 
+// Suppress GSAP "target null not found" when elements don't exist on the page
+if (typeof gsap !== "undefined") {
+    gsap.config({ nullTargetWarn: false });
+}
+
+(function() {
+    document.documentElement.classList.remove("dark");
+    if (document.body) document.body.classList.remove("dark");
+    document.documentElement.style.colorScheme = "light";
+})();
 
 (function($) {
     "use strict";
+
+    $(function() {
+        $("body").removeClass("dark");
+        document.documentElement.classList.remove("dark");
+    });
 
     // Get Device width
     let device_width = window.innerWidth;
@@ -233,37 +248,40 @@
         var modal_testimonial = document.querySelector("#modal_testimonial");
         var modal_trigger = document.querySelector(".modal-trigger");
         var modal_close = document.querySelector("#modal_close");
-
-        modal_trigger.addEventListener("click", function() {
-            modal_testimonial.classList.add("modal-show");
-        });
-        modal_close.addEventListener("click", function() {
-            modal_testimonial.classList.remove("modal-show");
-        });
+        if (modal_trigger && modal_close && modal_testimonial) {
+            modal_trigger.addEventListener("click", function() {
+                modal_testimonial.classList.add("modal-show");
+            });
+            modal_close.addEventListener("click", function() {
+                modal_testimonial.classList.remove("modal-show");
+            });
+        }
 
         // Testimonial Modal 2
         var modal_testimonial_2 = document.querySelector("#modal_testimonial2");
         var modal_trigger_2 = document.querySelector(".modal-trigger-2");
         var modal_close_2 = document.querySelector("#modal_close2");
-
-        modal_trigger_2.addEventListener("click", function() {
-            modal_testimonial_2.classList.add("modal-show");
-        });
-        modal_close_2.addEventListener("click", function() {
-            modal_testimonial_2.classList.remove("modal-show");
-        });
+        if (modal_trigger_2 && modal_close_2 && modal_testimonial_2) {
+            modal_trigger_2.addEventListener("click", function() {
+                modal_testimonial_2.classList.add("modal-show");
+            });
+            modal_close_2.addEventListener("click", function() {
+                modal_testimonial_2.classList.remove("modal-show");
+            });
+        }
 
         // Testimonial Modal 3
         var modal_testimonial_3 = document.querySelector("#modal_testimonial3");
         var modal_trigger_3 = document.querySelector(".modal-trigger-3");
         var modal_close_3 = document.querySelector("#modal_close3");
-
-        modal_trigger_3.addEventListener("click", function() {
-            modal_testimonial_3.classList.add("modal-show");
-        });
-        modal_close_3.addEventListener("click", function() {
-            modal_testimonial_3.classList.remove("modal-show");
-        });
+        if (modal_trigger_3 && modal_close_3 && modal_testimonial_3) {
+            modal_trigger_3.addEventListener("click", function() {
+                modal_testimonial_3.classList.add("modal-show");
+            });
+            modal_close_3.addEventListener("click", function() {
+                modal_testimonial_3.classList.remove("modal-show");
+            });
+        }
     }
 
     var job_apply = document.querySelector(".job__apply");
@@ -273,30 +291,32 @@
         var modal_application = document.querySelector("#application_form");
         var apply_trigger = document.querySelector(".job__apply");
         var apply_close = document.querySelector("#apply_close");
-
-        apply_trigger.addEventListener("click", function() {
-            modal_application.classList.add("modal-show");
-        });
-        apply_close.addEventListener("click", function() {
-            modal_application.classList.remove("modal-show");
-        });
+        if (apply_trigger && apply_close && modal_application) {
+            apply_trigger.addEventListener("click", function() {
+                modal_application.classList.add("modal-show");
+            });
+            apply_close.addEventListener("click", function() {
+                modal_application.classList.remove("modal-show");
+            });
+        }
 
         // application Modal 2
         var modal_application_2 = document.querySelector("#application_form2");
         var apply_trigger_2 = document.querySelector(".apply-trigger");
         var apply_close_2 = document.querySelector("#apply_close2");
         var back_form1 = document.querySelector("#back_form1");
-
-        apply_trigger_2.addEventListener("click", function() {
-            modal_application_2.classList.add("modal-show");
-        });
-        apply_close_2.addEventListener("click", function() {
-            modal_application_2.classList.remove("modal-show");
-            modal_application.classList.remove("modal-show");
-        });
-        back_form1.addEventListener("click", function() {
-            modal_application_2.classList.remove("modal-show");
-        });
+        if (apply_trigger_2 && apply_close_2 && back_form1 && modal_application_2) {
+            apply_trigger_2.addEventListener("click", function() {
+                modal_application_2.classList.add("modal-show");
+            });
+            apply_close_2.addEventListener("click", function() {
+                modal_application_2.classList.remove("modal-show");
+                if (modal_application) modal_application.classList.remove("modal-show");
+            });
+            back_form1.addEventListener("click", function() {
+                modal_application_2.classList.remove("modal-show");
+            });
+        }
     }
     /////////////////////////////////////////////////////
 
@@ -530,17 +550,19 @@
 
 
     /////////////////////////////////////////////////////
-    // 14. Testimonial Slider 3
+    // 14. Testimonial Slider 3 - show multiple testimonials at once, full width
     var testimonial_slider_3 = new Swiper(".testimonial__slider-3", {
-        spaceBetween: 0,
+        spaceBetween: 56,
         loop: true,
-        freemode: true,
         slidesPerView: 1,
-        speed: 2000,
-
+        speed: 600,
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+        },
         navigation: {
-            nextEl: ".next-button",
-            prevEl: ".prev-button",
+            nextEl: ".testimonial__area-3 .next-button",
+            prevEl: ".testimonial__area-3 .prev-button",
         },
     });
     /////////////////////////////////////////////////////
@@ -689,10 +711,7 @@
 
 
     /////////////////////////////////////////////////////
-    // 21. Config GSAP
-    gsap.config({
-        nullTargetWarn: false,
-    });
+    // 21. Config GSAP (nullTargetWarn set at top of file)
     /////////////////////////////////////////////////////
 
 
@@ -704,7 +723,7 @@
                 trigger: ".service__area-6",
                 pin: ".service__list-6",
                 pinSpacing: true,
-                start: "top top",
+                start: "top 100px",
                 end: "bottom bottom"
             }
         })
@@ -1145,6 +1164,23 @@
             }
         });
     }
+
+    // Hero 3 background video cycle (vid1 -> vid2 -> vid3 -> repeat)
+    const heroBgVideos = document.querySelectorAll(".hero__bg-video");
+    if (heroBgVideos.length) {
+        heroBgVideos.forEach(function (video, index) {
+            video.addEventListener("ended", function () {
+                const next = (index + 1) % heroBgVideos.length;
+                heroBgVideos.forEach(function (v) {
+                    v.classList.remove("active");
+                    v.pause();
+                });
+                heroBgVideos[next].classList.add("active");
+                heroBgVideos[next].currentTime = 0;
+                heroBgVideos[next].play();
+            });
+        });
+    }
     /////////////////////////////////////////////////////
 
 
@@ -1281,33 +1317,7 @@
 
 
     /////////////////////////////////////////////////////
-    // 38. Portfolio Animation
-    if (device_width > 767) {
-        let portfolioline = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".portfolio__area",
-                start: "top center-=200",
-                pin: ".portfolio__text",
-                end: "bottom bottom+=80",
-                markers: false,
-                pinSpacing: false,
-                scrub: 1,
-            }
-        })
-
-        portfolioline.to(".portfolio__text", {
-            scale: 3,
-            duration: 1
-        })
-        portfolioline.to(".portfolio__text", {
-            scale: 3,
-            duration: 1
-        })
-        portfolioline.to(".portfolio__text", {
-            scale: 1,
-            duration: 1
-        }, "+=2")
-    }
+    // 38. Portfolio Animation (disabled – pin/scale on portfolio__text removed)
 
 
     let portfolio_lists = gsap.utils.toArray(".portfolio__item")

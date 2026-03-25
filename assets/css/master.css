@@ -1252,7 +1252,7 @@ img {
 }
 
 .dark .about__area .sec-title {
-    color: var(--white);
+    color: var(--black-2);
 }
 
 .dark .about__area-2 {
@@ -1347,7 +1347,7 @@ img {
 }
 
 .dark .brand__area {
-    background-color: var(--black-2);
+    background-color: #3a3a3a;
 }
 
 .dark .brand__area .sec-title {
@@ -2934,6 +2934,13 @@ img {
     font-size: 60px;
     line-height: 1;
     color: var(--black-2);
+}
+
+.sec-title-hero-2 {
+    color: var(--black-2);
+    font-weight: 200;
+    font-size: 60px;
+    line-height: 1;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -7349,7 +7356,7 @@ img {
 /*----------------------------------------*/
 
 .hero__area {
-    background-color: var(--black);
+    background-color: #3a3a3a !important;
     position: relative;
     overflow: hidden;
 }
@@ -25728,7 +25735,7 @@ img {
 
 @media only screen and (max-width: 767px) {
     .footer__btm {
-        background-color: var(--black-2);
+        background-color: var(--gray-18);
     }
     .footer__btm .container {
         padding: 0;

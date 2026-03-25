@@ -1,0 +1,1010 @@
+/* Hero background video - auto-cycling vid1, vid2, vid3 */
+.hero__area-3 .hero__bg-videos {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.hero__area-3 .hero__bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.hero__area-3 .hero__bg-video.active {
+    opacity: 1;
+    z-index: 0;
+}
+
+/* ===== Site-wide: light mode only, no switcher, no custom cursors ===== */
+html {
+    color-scheme: light;
+}
+.switcher__area {
+    display: none !important;
+}
+.cursor1,
+.cursor2,
+.cursor,
+.cursor-f {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+/* about.html hero – video only (tiling.mp4) */
+.hero__area-2--video {
+    position: relative;
+    margin-top: 100px;
+    min-height: 55vh;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero__area-2--video .hero__video-wrap {
+    position: absolute;
+    inset: 0;
+}
+.hero__area-2--video .hero__video-wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* about.html – Who We Are card: visible content (override slider opacity) + bigger text */
+.about-primera-card .about-primera-intro,
+.about-primera-card .btn-common-wrap {
+    opacity: 1 !important;
+}
+.about-primera-card .about-primera-intro {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 100%;
+}
+@media (min-width: 768px) {
+    .about-primera-card .about-primera-intro {
+        font-size: 1.35rem;
+        line-height: 1.65;
+        max-width: 520px;
+    }
+}
+
+/* renovation.html hero – video background, below header */
+.solution__area--video-bg {
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+    min-height: 75vh;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (max-width: 991px) {
+    .solution__area--video-bg {
+        margin-top: 80px;
+        min-height: 70vh;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+@media (max-width: 767px) {
+    .solution__area--video-bg {
+        margin-top: 120px;
+        min-height: 65vh;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .solution__area--video-bg {
+        margin-top: 115px;
+    }
+}
+.solution__area--video-bg .solution__bg-video {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.solution__area--video-bg .solution__bg-video video {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+.solution__area--video-bg .container,
+.solution__area--video-bg .solution__wrapper,
+.solution__area--video-bg .solution__btm {
+    position: relative;
+    z-index: 1;
+}
+/* Hero without side images – left-aligned content */
+.solution__area--video-bg .solution__wrapper--center {
+    grid-template-columns: 1fr;
+    place-items: start;
+    text-align: left;
+}
+.solution__area--video-bg .solution__mid {
+    padding-left: 0;
+    max-width: 100%;
+}
+@media (max-width: 767px) {
+    .solution__area--video-bg .solution__wrapper,
+    .solution__area--video-bg .solution__mid {
+        padding-left: var(--bs-gutter-x, 15px);
+        padding-right: var(--bs-gutter-x, 15px);
+    }
+}
+/* Hero title smaller */
+.solution__area--video-bg .solution__title {
+    font-size: 72px;
+}
+@media (min-width: 768px) {
+    .solution__area--video-bg .solution__title {
+        font-size: 90px;
+    }
+}
+@media (min-width: 1200px) {
+    .solution__area--video-bg .solution__title {
+        font-size: 100px;
+    }
+}
+@media (max-width: 767px) {
+    .solution__area--video-bg .solution__title {
+        font-size: 48px;
+    }
+}
+@media (max-width: 480px) {
+    .solution__area--video-bg .solution__title {
+        font-size: 36px;
+        line-height: 1.15;
+    }
+}
+/* Hero tagline bigger, one line on desktop */
+.solution__area--video-bg .solution__mid p {
+    font-size: 1.35rem;
+    white-space: nowrap;
+}
+@media (min-width: 768px) {
+    .solution__area--video-bg .solution__mid p {
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 767px) {
+    .solution__area--video-bg .solution__mid p {
+        white-space: normal;
+        font-size: 1.15rem;
+        line-height: 1.4;
+    }
+}
+/* Fast / Quality / Affordable – more space above (move lower) */
+.solution__area--video-bg .solution__btm--inline {
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+@media (max-width: 767px) {
+    .solution__area--video-bg .solution__btm--inline {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+}
+.solution__area--video-bg .solution__btm--inline ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 1rem 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero tagline - bigger */
+.hero__area-3 .hero__text-3 p,
+.hero__area-3 .hero__text-animation {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+/* Hero "Restoration & Renovation" line - own class, smaller */
+.hero__area-3 .hero__restoration-tagline {
+    font-size: 36px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--black-2);
+    text-transform: uppercase;
+    z-index: 2;
+}
+@media (max-width: 991px) {
+    .hero__area-3 .hero__restoration-tagline { font-size: 18px; }
+}
+@media (max-width: 767px) {
+    .hero__area-3 .hero__restoration-tagline { font-size: 16px; }
+}
+
+/* Hero "PRIMERA" title - smaller */
+.hero__area-3 .sec-title.title-left {
+    font-size: 200px;
+}
+@media (max-width: 1919px) {
+    .hero__area-3 .sec-title.title-left { font-size: 170px; }
+}
+@media (max-width: 1399px) {
+    .hero__area-3 .sec-title.title-left { font-size: 170px; }
+}
+@media (max-width: 1199px) {
+    .hero__area-3 .sec-title.title-left { font-size: 120px; }
+}
+@media (max-width: 991px) {
+    .hero__area-3 .sec-title.title-left { font-size: 90px; }
+}
+@media (max-width: 767px) {
+    .hero__area-3 .sec-title.title-left { font-size: 56px; }
+}
+
+/* About section - larger body text */
+.about__area-3 .sec-text p {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+/* Restoration section - facts block */
+.restoration-facts {
+    margin-top: 2rem;
+    padding: 1.5rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.restoration-facts__title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    color: var(--black-2);
+}
+.restoration-facts__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.restoration-facts__list li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.restoration-facts__list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--black-2);
+    opacity: 0.6;
+}
+
+/* Service cards - image container inside each card (override master.css opacity/position) */
+.service__img-3 {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    min-width: 180px;
+    margin-top: 1.5rem;
+    align-self: end;
+}
+.service__img-3 img {
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    width: 100%;
+    min-width: 180px;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    background: #f0f0f0;
+}
+@media (max-width: 991px) {
+    .service__img-3 { min-width: 0; }
+    .service__img-3 img { height: 200px; min-width: 0; }
+}
+@media (max-width: 767px) {
+    .service__img-3 img { height: 180px; }
+}
+
+/* Primera logo - preserve aspect ratio, no stretching */
+.primera-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Header: hide menu (hamburger) icon on large screens – desktop nav is visible */
+@media (min-width: 1200px) {
+    .header__nav-icon-3 {
+        display: none !important;
+    }
+}
+
+/* Contact page footer - light gray background (override master.css black) */
+.footer__btm--gray,
+.footer__btm--gray .container,
+.footer__btm--gray .footer__inner {
+    background-color: #e8e8e8 !important;
+}
+.footer__btm--gray .footer__widget-3 {
+    background-color: #e8e8e8 !important;
+}
+.footer__btm--gray .footer__widget-4 {
+    background-color: #dcdcdc !important;
+}
+.footer__btm--gray .footer__widget p,
+.footer__btm--gray .footer__widget-title,
+.footer__btm--gray .footer__contact li,
+.footer__btm--gray .footer__contact a,
+.footer__btm--gray .footer__link a,
+.footer__btm--gray .project-title,
+.footer__btm--gray .contact-time,
+.footer__btm--gray .contact-day,
+.footer__btm--gray .footer__copyright p,
+.footer__btm--gray .footer__copyright a {
+    color: #333 !important;
+}
+.footer__btm--gray .footer__copyright a:hover {
+    color: #000;
+}
+.footer__btm--gray .footer__subscribe input {
+    background-color: #fff;
+    border-color: #ccc;
+    color: #333;
+}
+.footer__btm--gray .footer__social a span {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Contact us button in footer - yellow hover #E1AC00 */
+.footer__btm--gray .wc-btn-primary:hover {
+    border-color: #E1AC00;
+}
+.footer__btm--gray .wc-btn-primary:hover span {
+    background-color: #E1AC00;
+}
+
+/* Contact form Send Messages button - yellow hover #E1AC00 */
+.contact__area-6 .wc-btn-primary:hover {
+    border-color: #E1AC00;
+}
+.contact__area-6 .wc-btn-primary:hover span {
+    background-color: #E1AC00;
+}
+
+/* Restoration FAQs section */
+.faq__area .sec-text {
+    margin-top: 1rem;
+    max-width: 520px;
+}
+
+.faq__item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ffffff;
+}
+.faq__item:last-child {
+    border-bottom: none;
+}
+.faq__question {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: rgb(220, 175, 41);
+}
+.faq__answer {
+    margin: 0;
+    color: #cbc8c8;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+/* Testimonials full width + more space between slides */
+.testimonial__area-3 .container-fluid {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+@media (min-width: 768px) {
+    .testimonial__area-3 .container-fluid {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+@media (min-width: 1200px) {
+    .testimonial__area-3 .container-fluid {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+.testimonial__area-3 .testimonial__slider-3 {
+    max-width: none;
+    width: 100%;
+}
+
+/* Why choose us – full-width restoration image */
+.counter__img-3--full img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    display: block;
+    transform: translate(20%, -20%);
+}
+.counter__img-3--full {
+    width: 100%;
+    min-height: 360px;
+    overflow: hidden;
+}
+@media (min-width: 768px) {
+    .counter__img-3--full {
+        min-height: 420px;
+    }
+}
+@media (min-width: 1200px) {
+    .counter__img-3--full {
+        min-height: 520px;
+    }
+}
+
+/* about.html – two service buttons (Restoration / Renovation) */
+.service__area-2 .service__btn-2.btn_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* renovation about section – three columns: left img, content, right img */
+.about__content-wrapper--three {
+    grid-template-columns: 1fr 1.2fr 1fr;
+    grid-gap: 30px 40px;
+    align-items: center;
+}
+.about__content-wrapper--three .about__img img,
+.about__content-wrapper--three .about__img--right img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.about__content-wrapper--three .about__content p {
+    font-size: 1.2rem;
+    line-height: 1.65;
+    max-width: 42em;
+    margin: 0 0 0.5em;
+}
+@media (min-width: 768px) {
+    .about__content-wrapper--three .about__content p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+}
+
+/* Centered intro line above services */
+.about__content--center {
+    text-align: center;
+    max-width: 36em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16rem;
+    padding: 0 1rem 2rem;
+}
+.about__content--center p {
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.65;
+}
+@media (min-width: 768px) {
+    .about__content--center p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+}
+@media (max-width: 991px) {
+    .about__content-wrapper--three {
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+    }
+    .about__content-wrapper--three .about__img--right {
+        order: 3;
+    }
+}
+
+/* Right image – slide in from the right */
+.about__img-slide-right {
+    overflow: hidden;
+}
+.about__img-slide-right img {
+    animation: slideInFromRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+    transform: translateX(100%);
+    opacity: 0;
+}
+@keyframes slideInFromRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* renovation section – fixed background in light and dark theme */
+.service__area-6,
+.dark .service__area-6 {
+    background-color: #3a3a3a !important;
+}
+
+/* Keep left nav visible at all times – no clipping, above other content */
+.service__area-6 .left-content {
+    position: relative;
+    z-index: 10;
+    overflow: visible;
+    min-height: 0;
+}
+.service__area-6 .service__list-6 {
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+}
+/* Service nav – inactive white, active yellow */
+.service__area-6 .service__list-6 li a {
+    color: #fff !important;
+    transition: color 0.2s ease;
+}
+.service__area-6 .service__list-6 li.active a,
+.service__area-6 .service__list-6 li a.active {
+    color: #E1AC00 !important;
+}
+
+/* Service area right content – paragraphs white, H2 titles yellow */
+.service__area-6 .animation__service_page p,
+.service__area-6 .right-content p {
+    color: #fff !important;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+@media (min-width: 768px) {
+    .service__area-6 .animation__service_page p,
+    .service__area-6 .right-content p {
+        font-size: 1.25rem;
+    }
+}
+.service__area-6 .service__title-6,
+.service__area-6 .animation__service_page h2,
+.service__area-6 .right-content h2 {
+    color: #E1AC00 !important;
+}
+
+/* ===== About – Team area (staff cards: photo, name, role) ===== */
+.team__area .feature__list.team__grid {
+    row-gap: 3rem;
+}
+.team__area .team__heading-wrap,
+.team__area .team__heading-wrap .container,
+.team__area .team__heading-wrap .row,
+.team__area .team__heading-wrap .col-12,
+.team__area .team__heading {
+    text-align: center !important;
+}
+.team__area .team__heading {
+    color: #000 !important;
+    margin: 0;
+    display: block;
+    width: 100%;
+}
+.team__area .feature__item.team__card {
+    padding: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+.team__area .feature__item.team__card:last-child {
+    border-right: 0;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .team__area .feature__item.team__card:nth-child(odd) {
+        border-right: 1px solid rgba(0, 0, 0, 0.08);
+    }
+}
+@media (max-width: 767px) {
+    .team__area .feature__item.team__card {
+        padding-bottom: 2.5rem;
+    }
+}
+.team__area .team__card-photo {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 1.25rem;
+    max-width: 180px;
+}
+.team__area .team__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+.team__area .team__name {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    color: var(--black-2, #1a1a1a);
+    margin-bottom: 0.25rem;
+}
+.team__area .team__role {
+    color: var(--black-2, #1a1a1a);
+    opacity: 0.75;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* about.html – "Explore more" link under Renovation list */
+.service__item-2 .service__explore {
+    margin-top: 14px;
+}
+.service__item-2 .service__explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--black-2, #1a1a1a);
+}
+.service__item-2 .service__explore-link:hover {
+    color: var(--pink, #ff4aa1);
+}
+
+/* Footer – social icons: constrain custom PNG sizes */
+.footer__social li a span img {
+    width: 45px;
+    height: 45px;
+    display: block;
+    margin-left: 0px;
+}
+
+/* about.html – inline social mention under intro card */
+.about-follow-social {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+.about-follow-text {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    font-weight: 600;
+}
+.about-follow-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.about-follow-icon {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+/* Footer logo: larger than header logo */
+.navigation__logo-footer .primera-logo {    
+    height: 100px; 
+    max-width: none;   /* remove the 160px cap for footer */
+}
+
+.navigation__logo-header .primera-logo {
+    height: 68px;
+    max-width: none;
+    margin-left: 60px;
+}
+
+/* application.html – hero section */
+.hero__area--app {
+    padding-top: 140px; /* sit under fixed navbar */
+    background-color: #3a3a3a !important;
+}
+.hero__area--app::after {
+    display: none; /* remove dark overlay so #3a3a3a shows; PNG img has no background */
+}
+/* Mobile first – prevent word cutoff */
+.hero__area--app .hero__content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: visible;
+}
+.hero__area--app .hero__title-wrapper {
+    max-width: 100%;
+}
+.hero__area--app .hero__title--app {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-top: 0.5rem !important;
+}
+@media (min-width: 360px) {
+    .hero__area--app .hero__title--app {
+        font-size: 28px !important;
+    }
+}
+@media (min-width: 480px) {
+    .hero__area--app .hero__title--app {
+        font-size: 36px !important;
+    }
+}
+@media (min-width: 576px) {
+    .hero__area--app .hero__title--app {
+        font-size: 42px !important;
+    }
+}
+@media (min-width: 768px) {
+    .hero__area--app .hero__title--app {
+        font-size: 56px !important;
+        margin-top: 1rem !important;
+    }
+}
+@media (min-width: 992px) {
+    .hero__area--app .hero__title--app {
+        font-size: 80px !important;
+        margin-top: 2rem !important;
+    }
+}
+@media (min-width: 1200px) {
+    .hero__area--app .hero__title--app {
+        font-size: 100px !important;
+        margin-top: 55px !important;
+    }
+}
+@media (max-width: 767px) {
+    .hero__area--app .hero__title-line {
+        display: block;
+    }
+    .hero__area--app {
+        padding-top: 100px;
+        padding-bottom: 4rem;
+    }
+    .hero__area--app .hero__title-wrapper {
+        margin-bottom: 1rem;
+    }
+    .hero__area--app .hero__scroll-prompt {
+        display: none;
+    }
+    .hero__area--app .hero__arrow-down {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 40px;
+        margin: 0;
+    }
+}
+.hero__area--app .hero__title--app::after {
+    display: none !important; /* remove "Pro" badge */
+}
+.hero__area--app .hero__scroll-prompt {
+    margin-top: 1.2rem;
+    color: #a4f8ed;
+    font-size: 1.5rem;
+}
+
+/* application.html & gallery.html – gallery sections: background and portfolio visibility.
+   master.css hides .portfolio__item with rotateX(90deg) and position:fixed/opacity:0;
+   override so photos show on both pages. */
+.gallery__section {
+    background-color: #3a3a3a !important;
+}
+.gallery__section .portfolio__list-1 .portfolio__item {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    opacity: 1 !important;
+    scale: 1;
+}
+.gallery__section .portfolio__list-1 .portfolio__item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* application.html – gallery: reduce gap between last gallery row and Get a Free Quote button */
+.gallery__section .row_bottom {
+    margin-top: 2.5rem;
+}
+
+/* application.html – about section: constrain img-right so it doesn't cover content */
+.page-application .about__img-right {
+    max-width: 280px;
+}
+.page-application .about__img-right img {
+    max-width: 150%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Footer – Contact Us section: form, contact info, social icons */
+.footer__contact-form-wrap .footer__social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+.footer__contact-form-wrap .footer__social-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+.footer__contact-form-wrap .footer__social-icon:hover {
+    opacity: 1;
+}
+.footer__contact-form {
+    margin-top: 12px;
+}
+.footer__contact-form input,
+.footer__contact-form textarea {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    border-radius: 4px;
+}
+.footer__contact-form input::placeholder,
+.footer__contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+.footer__contact-form textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+.footer__contact-form .btn-item--sm {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* application.html – Contact Us section after testimonials */
+.contact-app__area {
+    background-color: #f8f8f8;
+}
+.contact-app__info h3 {
+    margin-bottom: 1.5rem;
+}
+.contact-app__details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.contact-app__details li {
+    margin-bottom: 0.75rem;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.contact-app__details a {
+    color: inherit;
+}
+.contact-app__details a:hover {
+    color: var(--secondary, #E1AC00);
+}
+.contact-app__social {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.contact-app__social-label {
+    margin: 0;
+    font-weight: 600;
+}
+.contact-app__social-icon {
+    width: 28px;
+    height: 28px;
+    opacity: 0.85;
+}
+.contact-app__social-icon:hover {
+    opacity: 1;
+}
+.contact-app__form input,
+.contact-app__form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+}
+.contact-app__form textarea {
+    resize: vertical;
+}
+.contact-app__form .g-3 > [class*="col-"] {
+    margin-bottom: 1rem;
+}
+.contact-app__form .btn-item:hover {
+    border-color: #E1AC00 !important;
+    background-color: #E1AC00 !important;
+}
+.contact-app__form .btn-item:hover span {
+    background-color: #E1AC00 !important;
+}
+
+/* about.html – team section background */
+.team__area--bg {
+    background-image: url('assets/imgs/about/1/bg-team.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.team__area--bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+.team__area--bg .feature__top,
+.team__area--bg .feature__btm,
+.team__area--bg .feature__btm .container,
+.team__area--bg .team__heading {
+    position: relative;
+    z-index: 1;
+}
+.team__area--bg .team__heading {
+    color: #fff !important;
+}
+.team__area--bg .team__name,
+.team__area--bg .team__role {
+    color: #fff !important;
+}
+.team__area--bg .team__card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.team__area--bg {
+    position: relative;
+}
+
+/* about.html – goal/services section gray background */
+.service__area-2--gray {
+    background-color: #e8e8e8 !important;
+}
+
+/* about.html – goal section image */
+.about-goal__img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+@media (max-width: 767px) {
+    .about-goal__img {
+        margin-bottom: 2rem;
+    }
+}
+
+/* application.html – navbar white like other pages (not transparent over dark hero) */
+.page-application .header__area-3 {
+    background-color: #fff !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}

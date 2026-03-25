@@ -1,66 +1,59 @@
-# HealthHup - Frontend Website 🌱💻
+# Primera Website
 
-HealthHup is a modern and interactive health and medical platform designed to provide users with easy access to essential health services and information. This repository contains the frontend implementation of the HealthHup website, built with a focus on user experience and intuitive design.
-
----
-
-## Technologies Used 🛠️:
-- **JavaScript**
-- **CSS**
-- **SCSS**
-- **HTML** 
+Website for **Primera Restoration and Renovation** — restoration and renovation services in Calgary and surrounding areas.
 
 ---
 
-## Pages 📄
+## Tech stack
 
-### 1. **Intro Page 🚀**
-The introductory page welcomes users with a brief explanation of the website’s concept, designed to be visually appealing and engaging. It leads users directly to the main homepage.  
-
-![Intro Page](https://github.com/AHMAD-JX/Website-HealthHup/blob/57e2e502f7eb4002334bb3721a9fcd8dd005cbc6/assets/intro.gif)
-
-### 2. **Home Page 🏠**
-The homepage provides a detailed overview of the website’s purpose, offering a seamless and user-friendly navigation experience. From here, users can access all other pages easily.  
-
-- ![Index Page](https://github.com/AHMAD-JX/Website-HealthHup/blob/57e2e502f7eb4002334bb3721a9fcd8dd005cbc6/assets/home.gif)
-
-### 3. **Services Page 🏥**
-This page highlights the range of services offered by HealthHup, including useful medical tools, resources, and features designed to improve health management.  
-
-![Services Page](https://github.com/AHMAD-JX/Website-HealthHup/blob/57e2e502f7eb4002334bb3721a9fcd8dd005cbc6/assets/service.gif)
-
-### 4. **Application Page 📲**
-A dedicated page where users can download the mobile app for both Android and iOS, bringing the platform's services to their fingertips.  
-
-![Application Page](https://github.com/AHMAD-JX/Website-HealthHup/blob/57e2e502f7eb4002334bb3721a9fcd8dd005cbc6/assets/appication.gif)
-
-### 5. **And More... 🔍**
-Discover the rest of the website’s features and pages, each designed with usability and accessibility in mind. We encourage users to explore the platform to uncover all its capabilities!
+- **HTML** · **CSS** · **JavaScript**
+- No build step; static files ready to deploy (e.g. Vercel).
 
 ---
 
-## Installation 🛠️
+## Pages
 
-To run the project locally, follow these steps:
-
-1. Clone the repository:
-    ```bash
-    git clone git@github.com:your-username/Website-HealthHup.git
-    ```
-
-2. Navigate to the project directory:
-    ```bash
-    cd Website-HealthHup
-    ```
-
-3. Open the `index.html` file in your browser to view the site.
+- **Home** (`index.html`) — Hero, intro, CTA
+- **About** (`about.html`) — Who we are, team, services
+- **Renovation** (`renovation.html`) — Renovation services
+- **Gallery** (`application.html`) — Project gallery, workflow, contact form, testimonials
+- **Contact** (`contact.html`) — Contact and quote
 
 ---
 
-## Contributing 🤝
+## Run locally
 
-Feel free to fork the repository and submit pull requests for any improvements or bug fixes. We welcome contributions to make HealthHup even better!
+1. **Clone the repo** (after you create it on GitHub as `primera-website`):
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/primera-website.git
+   cd primera-website
+   ```
+
+2. **Serve over HTTP** (required for header/footer partials):
+   - **VS Code:** Right‑click `index.html` → “Open with Live Server”
+   - **Or:** `npx serve .` then open http://localhost:3000
+
+   Do not open HTML files with `file://` — the includes won’t load.
 
 ---
 
+## Deploy (Vercel)
 
+- Framework: **Other**
+- Build command: leave empty
+- Output directory: leave empty  
+- Optional: `vercel.json` rewrites give clean URLs (`/about`, `/gallery`, etc.)
+
+---
+
+## Repo name
+
+This project is intended to be pushed to GitHub as **`primera-website`**. To rename your local folder to match:
+
+```bash
+cd ..
+mv Website-HealthHup primera-website
+cd primera-website
+```
+
+Then add your GitHub remote and push (e.g. `git remote add origin https://github.com/YOUR_USERNAME/primera-website.git`).
