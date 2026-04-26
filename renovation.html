@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Preload hero video for faster first paint -->
+    <link rel="preload" as="video" href="/assets/video/renohero2.mp4" type="video/mp4">
+
     <!-- All CSS files -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
@@ -115,7 +118,7 @@
                 <!-- Hero area start -->
                 <section class="solution__area solution__area--video-bg">
                     <div class="solution__bg-video" aria-hidden="true">
-                        <video src="assets/video/renohero2.mp4" muted playsinline autoplay loop></video>
+                        <video src="/assets/video/renohero2.mp4" muted playsinline autoplay loop preload="auto" poster="/assets/imgs/renovation/renovationhero4.jpg"></video>
                     </div>
                     <div class="container hero-line"></div>
                     <div class="solution__wrapper solution__wrapper--center">
