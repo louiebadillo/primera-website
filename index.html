@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Preload hero video for faster first paint -->
+    <link rel="preload" as="video" href="/assets/video/vid1.mp4" type="video/mp4">
+
     <!-- All CSS files -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
@@ -123,10 +126,10 @@
                                     <div class="sec-title-wrapper">
                                         <!-- <h2 class="sec-sub-title" style="color:#c9f31d;">Future</h2> -->
                                         <h3 class="sec-title title-left hero-title">
-                                            <span class="hero-title__desktop" aria-hidden="true">Care in Every Repair.<br> Quality in Every Finish.</span>
+                                            <span class="hero-title__desktop" aria-hidden="true">Care in Every Repair,<br>Quality in Every Finish.</span>
                                             <span class="hero-title__mobile">
                                                 <span class="hero-title__line">Care in</span>
-                                                <span class="hero-title__line">Every Repair.</span>
+                                                <span class="hero-title__line">Every Repair,</span>
                                                 <span class="hero-title__line">Quality in</span>
                                                 <span class="hero-title__line">Every Finish.</span>
                                             </span>
@@ -156,9 +159,9 @@
                     
                     
                     <div class="hero__bg-videos" aria-hidden="true">
-                        <video class="hero__bg-video active" data-video="0" src="assets/video/vid1.mp4" muted playsinline autoplay></video>
-                        <video class="hero__bg-video" data-video="1" src="assets/video/vid2.mp4" muted playsinline></video>
-                        <video class="hero__bg-video" data-video="2" src="assets/video/vid3.mp4" muted playsinline></video>
+                        <video class="hero__bg-video active" data-video="0" src="/assets/video/vid1.mp4" muted playsinline autoplay preload="auto" poster="/assets/imgs/hero/3/01.jpg"></video>
+                        <video class="hero__bg-video" data-video="1" src="/assets/video/vid2.mp4" muted playsinline preload="none"></video>
+                        <video class="hero__bg-video" data-video="2" src="/assets/video/vid3.mp4" muted playsinline preload="none"></video>
                     </div>
                     
 

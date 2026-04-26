@@ -2696,40 +2696,8 @@ if (typeof gsap !== "undefined") {
     }
 
 
-    // Charchater Come long Animation 
-    let mark = document.querySelector(".hero__area-3 .title-left")
-    let eting = document.querySelector(".hero__area-3 .title-right")
-    let hero__text_animation = document.querySelector(".hero__text-animation")
-
-
-    let split_creatives = new SplitText(mark, {
-        type: "chars"
-    })
-    let split_solutions = new SplitText(eting, {
-        type: "chars"
-    })
-    let split_text_animation = new SplitText(hero__text_animation, {
-        type: "chars words"
-    })
-
-    HomeDigital.from(split_creatives.chars, {
-        duration: 2,
-        x: 100,
-        autoAlpha: 0,
-        stagger: 0.2
-    });
-    HomeDigital.from(split_solutions.chars, {
-        duration: 1,
-        x: 100,
-        autoAlpha: 0,
-        stagger: 0.1
-    }, "-=1");
-    HomeDigital.from(split_text_animation.words, {
-        duration: 1,
-        x: 50,
-        autoAlpha: 0,
-        stagger: 0.05
-    }, "-=1");
+    // Home hero animation (disabled)
+    // Keeping the rest of the site's GSAP animations intact.
 
 
 

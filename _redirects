@@ -1,10 +1,17 @@
-/about                 /about.html                 200
-/contact               /contact.html               200
-/renovation            /renovation.html            200
+/about                 /about/                     301
+/about/                /about.html                 200
+
+/contact               /contact/                   301
+/contact/              /contact.html               200
+
+/renovation            /renovation/                301
+/renovation/           /renovation.html            200
+
 /service               /service.html               200
 /others                /others.html                200
 /intro                 /intro.html                 200
-/privacy               /privacy.html               200
+/privacy               /privacy/                   301
+/privacy/              /privacy.html               200
 
 # Gallery (canonical)
 /gallery               /gallery/                   301

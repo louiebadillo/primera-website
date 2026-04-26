@@ -257,6 +257,22 @@ html {
     font-size: clamp(40px, 5.6vw, 72px);
     line-height: 1.05;
 }
+
+/* Home hero: disable all animations/transitions in this section */
+.page-home .hero__area-3 *,
+.page-home .hero__area-3 *::before,
+.page-home .hero__area-3 *::after {
+    animation: none !important;
+    transition: none !important;
+}
+.page-home .hero__area-3 .title-left,
+.page-home .hero__area-3 .hero__text-animation,
+.page-home .hero__area-3 .scroll-down,
+.page-home .hero__area-3 .hero__cta-panel {
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
 .page-home .hero__area-3 .hero-title__line {
     display: inline;
 }
