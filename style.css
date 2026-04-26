@@ -260,6 +260,12 @@ html {
 .page-home .hero__area-3 .hero-title__line {
     display: inline;
 }
+.page-home .hero__area-3 .hero-title__desktop {
+    display: inline;
+}
+.page-home .hero__area-3 .hero-title__mobile {
+    display: none;
+}
 .page-home .hero__area-3 .hero__text-animation {
     margin-top: 14px;
     max-width: 46ch;
@@ -278,6 +284,12 @@ html {
     }
     .page-home .hero__area-3 .hero-title__line {
         display: block;
+    }
+    .page-home .hero__area-3 .hero-title__desktop {
+        display: none;
+    }
+    .page-home .hero__area-3 .hero-title__mobile {
+        display: inline;
     }
     .page-home .hero__area-3 .hero__text-animation {
         font-size: 18px;
