@@ -4,81 +4,41 @@
         <div class="header__inner-3">
             <div class="header__logo-2">
                 <div class="navigation__logo-header">
-                    <a href="index.html"><img src="assets/imgs/logo/primeralogo.png" alt="Primera" class="primera-logo"></a>
+                    <a href="/index.html"><img src="/assets/imgs/logo/primeralogo2.png" alt="Primera" class="primera-logo"></a>
                 </div>
             </div>
             <div class="header__nav-2">
                 <ul class="main-menu-3 menu-anim">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="renovation.html">Renovation</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="application.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/index.html">Restoration</a></li>
+                    <li><a href="/renovation.html">Renovation</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="header__nav-icon-3">
-                <button id="open_offcanvas"><img src="assets/imgs/icon/menu-black.png" alt="Menubar Icon"></button>
+                <button
+                    class="mobile-menu-toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="mobile_menu_panel"
+                    data-mobile-menu-toggle
+                >
+                    <img src="/assets/imgs/icon/menu-black.png" alt="">
+                </button>
             </div>
+        </div>
+        <div class="mobile-menu-panel" id="mobile_menu_panel" hidden>
+            <nav class="mobile-menu-panel__nav" aria-label="Mobile menu">
+                <ul class="mobile-menu-panel__list">
+                    <li><a href="/index.html">Restoration</a></li>
+                    <li><a href="/renovation.html">Renovation</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <!-- Header area end -->
-
-    <!-- Offcanvas area start -->
-    <div class="offcanvas__area">
-        <div class="offcanvas__body">
-            <div class="offcanvas__left">
-                <div class="offcanvas__logo">
-                    <div class="navigation__logo">
-                        <div class="navigation__logo-logomark"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="6" fill="#F3EF6A"/><path d="M13.0788 5.18059C13.4229 4.36611 14.5771 4.36611 14.9212 5.18059L17.1088 10.3591C17.2101 10.599 17.401 10.7899 17.6409 10.8912L22.8194 13.0788C23.6339 13.4229 23.6339 14.5771 22.8194 14.9212L17.6409 17.1088C17.401 17.2101 17.2101 17.401 17.1088 17.6409L14.9212 22.8194C14.5771 23.6339 13.4229 23.6339 13.0788 22.8194L10.8912 17.6409C10.7899 17.401 10.599 17.2101 10.3591 17.1088L5.18059 14.9212C4.36611 14.5771 4.36611 13.4229 5.18059 13.0788L10.3591 10.8912C10.599 10.7899 10.7899 10.599 10.8912 10.3591L13.0788 5.18059Z" fill="black"/></svg><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="27" height="27" rx="5.5" stroke="#93D5E1" stroke-linejoin="round" stroke-dasharray="2 2"/></svg></div>
-                        <a href="index.html"><img src="assets/imgs/logo/primeralogo.png" alt="Primera" class="primera-logo"></a>
-                    </div>
-                </div>
-                <div class="offcanvas__social">
-                    <h3 class="social-title">Follow Us</h3>
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
-                </div>
-                <div class="offcanvas__links">
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="service.html">Service</a></li>
-                        <li><a href="ifteam.html">Team</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="offcanvas__mid">
-                <div class="offcanvas__menu-wrapper">
-                    <nav class="offcanvas__menu">
-                        <ul class="menu-anim">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="renovation.html">Renovation</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="application.html">Gallery</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="offcanvas__right">
-                <div class="offcanvas__contact">
-                    <h3>Get in touch</h3>
-                    <ul>
-                        <li><a href="tel:14037077617">403-707-7617</a></li>
-                        <li><a href="mailto:primera@gmail.com">primera@gmail.com</a></li>
-                        <li>Calgary, Alberta, Canada</li>
-                    </ul>
-                </div>
-                <img src="assets/imgs/shape/11.png" alt="shape" class="shape-1">
-                <img src="assets/imgs/shape/12.png" alt="shape" class="shape-2">
-            </div>
-            <div class="offcanvas__close">
-                <button type="button" id="close_offcanvas"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-        </div>
-    </div>
-    <!-- Offcanvas area end -->

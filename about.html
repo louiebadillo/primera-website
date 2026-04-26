@@ -10,7 +10,7 @@
     <title>Home - About us</title>
 
     <!-- Fav Icon -->
-    <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon-primera.png">
+    <link rel="icon" type="image/png" href="assets/imgs/logo/primeralogosmall.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,8 +88,8 @@
                             <div class="col-xxl-12">
                                 <div class="portfolio__slide-2 about-primera-card">
                                     <div class="slide-img">
-                                        <a href="application.html"><img
-                                                src="assets/imgs/renovation/renovationservices/paintingservice.jpg"
+                                        <a href="/gallery"><img
+                                                src="assets/imgs/about/1/aboutus1.jpeg"
                                                 alt="Primera"></a>
                                     </div>
                                     <div class="slide-content">
@@ -161,7 +161,8 @@
                         <div class="row align-items-center">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                                 <div class="about-goal__img">
-                                    <img src="assets/imgs/about/1/kitchen2.jpg" alt="Kitchen renovation - Primera">
+                                    <img class="about-goal__img-item" src="assets/imgs/about/about-carousel/photoabout.jpg" alt="Primera project photo">
+                                    <img class="about-goal__img-item" src="assets/imgs/about/about-carousel/photoabout2.JPG" alt="Primera project photo">
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
@@ -289,9 +290,24 @@
                         </div>
                     </div>
                 </section>
+                <!-- Workflow gallery marquee start -->
+                <section class="about-workflow-marquee" aria-label="Project photos marquee">
+                    <div class="container">
+                        <div class="marquee" style="--duration: 55s;">
+                            <div class="marquee__group" data-about-marquee="row1-a"></div>
+                            <div class="marquee__group" aria-hidden="true" data-about-marquee="row1-b"></div>
+                        </div>
 
-                <!-- Team area start -->
-                <section class="feature__area-2 team__area team__area--bg pt-130">
+                        <div class="marquee marquee--reverse" style="--duration: 65s;">
+                            <div class="marquee__group" data-about-marquee="row2-a"></div>
+                            <div class="marquee__group" aria-hidden="true" data-about-marquee="row2-b"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Workflow gallery marquee end -->
+
+                <!-- Team area start (hidden for now) -->
+                <section class="feature__area-2 team__area team__area--bg pt-130" hidden aria-hidden="true">
                     <div class="feature__top team__heading-wrap">
                         <div class="container">
                             <div class="row">
@@ -378,64 +394,99 @@
                             </div>
                         </div>
                     </div>
+
                 </section>
                 <!-- Team area end -->
-                <section>
-                    <div class="container pb-140 pt-140">
-                        <div class="row">
-                            <div class="col-xxl-12">
-                                <div class="brand__list-2">
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/1.png" alt="Brand Logo">
-                                    </div>
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/2.png" alt="Brand Logo">
-                                    </div>
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/3.png" alt="Brand Logo">
-                                    </div>
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/4.png" alt="Brand Logo">
-                                    </div>
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/5.png" alt="Brand Logo">
-                                    </div>
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/6.png" alt="Brand Logo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
+                
                 <!-- About area start -->
                 <section class="about__area-2">
-                    <div class="container pt-130 pb-110">
-                        <div class="row">
-                            <div class="col-xxl-12">
-                                <div class="sec-title-wrapper">
-                                    <h2 class="sec-title title-anim">Here for You in Stressful Times <br>with calm,
-                                        practical support when you need it most.</h2>
-                                </div>
-                                <div class="sec-text-wrapper">
-                                    <div class="sec-text text-anim">
-                                        <p>
-
-                                        </p>
+            
+                    <div class="about-toc pb-130">
+                        <div class="container">
+                            <div class="about-links-list">
+                                <div class="row">
+                                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5">
+                                        <div class="sec-title-wrapper wrap">
+                                            <h2 class="sec-sub-title title-anim" style="color: orange;">Explore</h2>
+                                            <h3 class="sec-title title-anim">Where to next</h3>
+                                        </div>
                                     </div>
-                                    <div class="sec-btn btn_wrapper">
-                                        <a class="wc-btn-pink btn-hover btn-item" href="contact.html"><span></span>
-                                            Contact us <i class="fa-solid fa-arrow-right"></i></a>
+                                    <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
+                                        <div class="service__top-text text-anim">
+                                            <p>Choose the path that matches what you need right now.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="service__list-wrapper">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="service__list">
+                                                <a href="index.html">
+                                                    <div class="service__item animation_home1_service" data-service="1">
+                                                        <div class="service__number"><span>01</span></div>
+                                                        <div class="service__title-wrapper">
+                                                            <h4 class="service__title">Home Restoration</h4>
+                                                        </div>
+                                                        <div class="service__text">
+                                                            <p>Water, fire, mold, and emergency repairs—fast help with a clear plan.</p>
+                                                        </div>
+                                                        <div class="service__link">
+                                                            <p><i class="fa-solid fa-arrow-right"></i></p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <a href="renovation.html">
+                                                    <div class="service__item animation_home1_service" data-service="2">
+                                                        <div class="service__number"><span>02</span></div>
+                                                        <div class="service__title-wrapper">
+                                                            <h4 class="service__title">Home Renovation</h4>
+                                                        </div>
+                                                        <div class="service__text">
+                                                            <p>Kitchens, bathrooms, basements, and improvements—built for comfort and value.</p>
+                                                        </div>
+                                                        <div class="service__link">
+                                                            <p><i class="fa-solid fa-arrow-right"></i></p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <a href="/gallery">
+                                                    <div class="service__item animation_home1_service" data-service="3">
+                                                        <div class="service__number"><span>03</span></div>
+                                                        <div class="service__title-wrapper">
+                                                            <h4 class="service__title">Project Gallery</h4>
+                                                        </div>
+                                                        <div class="service__text">
+                                                            <p>Browse real project photos by category and open any project to view the full set.</p>
+                                                        </div>
+                                                        <div class="service__link">
+                                                            <p><i class="fa-solid fa-arrow-right"></i></p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <a href="contact.html">
+                                                    <div class="service__item animation_home1_service" data-service="4">
+                                                        <div class="service__number"><span>04</span></div>
+                                                        <div class="service__title-wrapper">
+                                                            <h4 class="service__title">Contact Us</h4>
+                                                        </div>
+                                                        <div class="service__text">
+                                                            <p>Tell us what you need—we’ll follow up with timing, next steps, and a quote.</p>
+                                                        </div>
+                                                        <div class="service__link">
+                                                            <p><i class="fa-solid fa-arrow-right"></i></p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="about__img-2 pb-130">
-                        <img src="assets/imgs/service/3/img1.jpeg" alt="About Image" data-speed="0.2">
                     </div>
                 </section>
 
@@ -471,6 +522,7 @@
     <script src="assets/js/mixitup.min.js"></script>
     <script src="assets/js/vanilla-tilt.js"></script>
     <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/about-carousel.js"></script>
     <script src="assets/js/main.js"></script>
 
 

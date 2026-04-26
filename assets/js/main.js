@@ -206,15 +206,72 @@ if (typeof gsap !== "undefined") {
 
 
     /////////////////////////////////////////////////////
-    // 02. Offcanvas 
-    $("#open_offcanvas").click(function() {
-        $('.offcanvas__area').css('opacity', '1');
-        $('.offcanvas__area').css('visibility', 'visible');
-    });
-    $("#close_offcanvas").click(function() {
-        $('.offcanvas__area').css('opacity', '0');
-        $('.offcanvas__area').css('visibility', 'hidden');
-    });
+    // 02. Mobile Menu (simple dropdown)
+    (function initMobileMenu() {
+        function getToggle() {
+            return document.querySelector("[data-mobile-menu-toggle]");
+        }
+
+        function getPanel() {
+            return document.getElementById("mobile_menu_panel");
+        }
+
+        function setOpen(isOpen) {
+            var toggle = getToggle();
+            var panel = getPanel();
+            if (!toggle || !panel) return;
+
+            if (isOpen) {
+                toggle.setAttribute("aria-expanded", "true");
+                toggle.setAttribute("aria-label", "Close menu");
+                panel.hidden = false;
+                panel.classList.add("is-open");
+                document.documentElement.classList.add("has-mobile-menu-open");
+            } else {
+                toggle.setAttribute("aria-expanded", "false");
+                toggle.setAttribute("aria-label", "Open menu");
+                panel.classList.remove("is-open");
+                panel.hidden = true;
+                document.documentElement.classList.remove("has-mobile-menu-open");
+            }
+        }
+
+        function isOpen() {
+            var toggle = getToggle();
+            return toggle ? toggle.getAttribute("aria-expanded") === "true" : false;
+        }
+
+        document.addEventListener("click", function(e) {
+            var toggle = e.target && e.target.closest ? e.target.closest("[data-mobile-menu-toggle]") : null;
+            var panel = getPanel();
+
+            if (toggle) {
+                e.preventDefault();
+                setOpen(!isOpen());
+                return;
+            }
+
+            if (!panel || panel.hidden) return;
+
+            // Clicking a link closes the menu
+            if (e.target && e.target.closest && e.target.closest("#mobile_menu_panel a")) {
+                setOpen(false);
+                return;
+            }
+
+            // Clicking outside closes the menu
+            if (e.target && e.target.closest) {
+                var insideHeader = e.target.closest(".header__inner-3") || e.target.closest("#mobile_menu_panel");
+                if (!insideHeader) {
+                    setOpen(false);
+                }
+            }
+        }, { passive: false });
+
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "Escape" && isOpen()) setOpen(false);
+        });
+    })();
     /////////////////////////////////////////////////////
 
 
@@ -917,13 +974,13 @@ if (typeof gsap !== "undefined") {
                 type: "lines"
             })
             tl.from(itemSplitted.lines, {
-                duration: 1,
-                delay: 0.3,
+                duration: 0.6,
+                delay: 0.1,
                 opacity: 0,
                 rotationX: -80,
                 force3D: true,
                 transformOrigin: "top center -50",
-                stagger: 0.1
+                stagger: 0.06
             });
         });
         /////////////////////////////////////////////////////
@@ -962,13 +1019,13 @@ if (typeof gsap !== "undefined") {
                 type: "lines"
             })
             tl.from(itemSplitted.lines, {
-                duration: 1,
-                delay: 0.5,
+                duration: 0.6,
+                delay: 0.15,
                 opacity: 0,
                 rotationX: -80,
                 force3D: true,
                 transformOrigin: "top center -50",
-                stagger: 0.1
+                stagger: 0.06
             });
         });
         /////////////////////////////////////////////////////
@@ -1007,16 +1064,7 @@ if (typeof gsap !== "undefined") {
 
 
 
-    jQuery(document).ready(function() {
-        /////////////////////////////////////////////////////
-        // 29. Offcanvas Menu
-        $('.offcanvas__menu').meanmenu({
-            meanScreenWidth: "5000",
-            meanMenuContainer: '.offcanvas__menu-wrapper',
-            meanMenuCloseSize: '36px',
-        });
-        /////////////////////////////////////////////////////
-    });
+    // meanmenu/offcanvas removed (replaced by simple mobile dropdown menu)
 
 
     /////////////////////////////////////////////////////
@@ -4116,9 +4164,10 @@ if (typeof gsap !== "undefined") {
 
     /////////////////////////////////////////////////
     var range_slider = $("#slider-range");
+    var slider_range_2 = $("#slider_range_2");
 
-    if (range_slider) {
-        $("#slider-range").slider({
+    if (range_slider.length && typeof $.fn.slider === "function") {
+        range_slider.slider({
             range: true,
             min: 0,
             max: 6000,
@@ -4129,31 +4178,29 @@ if (typeof gsap !== "undefined") {
         });
         $("#amount").val(
             "$" +
-            $("#slider-range").slider("values", 0) +
+            range_slider.slider("values", 0) +
             " - $" +
-            $("#slider-range").slider("values", 1)
+            range_slider.slider("values", 1)
         );
     }
-    /////////////////////////////////////////////////
 
-
-    /////////////////////////////////////////////////
-    //
-    $("#slider_range_2").slider({
-        range: true,
-        min: 0,
-        max: 6000,
-        values: [0, 6000],
-        slide: function(event, ui) {
-            $("#amount_2").val("$" + ui.values[0] + " - $" + ui.values[1]);
-        }
-    });
-    $("#amount_2").val(
-        "$" +
-        $("#slider_range_2").slider("values", 0) +
-        " - $" +
-        $("#slider_range_2").slider("values", 1)
-    );
+    if (slider_range_2.length && typeof $.fn.slider === "function") {
+        slider_range_2.slider({
+            range: true,
+            min: 0,
+            max: 6000,
+            values: [0, 6000],
+            slide: function(event, ui) {
+                $("#amount_2").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        $("#amount_2").val(
+            "$" +
+            slider_range_2.slider("values", 0) +
+            " - $" +
+            slider_range_2.slider("values", 1)
+        );
+    }
     /////////////////////////////////////////////////
 
 

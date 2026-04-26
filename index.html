@@ -10,7 +10,7 @@
     <title>Home - Health Hup</title>
 
     <!-- Fav Icon -->
-    <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon-primera.png">
+    <link rel="icon" type="image/png" href="assets/imgs/logo/primeralogosmall.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
 </head>
 
 
-<body>
+<body class="page-home">
     <!-- Cursor Animation -->
     <div class="cursor1"></div>
     <div class="cursor2"></div>
@@ -121,17 +121,19 @@
                             <div class="col-xxl-12">
                                 <div class="hero__inner-3">
                                     <div class="sec-title-wrapper">
-                                        <h2 class="sec-sub-title" style="color:#c9f31d;">Future</h2>
-                                        <h3 class="sec-title title-left">PRIMERA</h3>
-                                        <h2 class="hero__restoration-tagline" style="color:#E1AC00;">Restoration & Renovation</h2>
+                                        <!-- <h2 class="sec-sub-title" style="color:#c9f31d;">Future</h2> -->
+                                        <h3 class="sec-title title-left hero-title">
+                                            <span class="hero-title__line">Care in</span>
+                                            <span class="hero-title__line">Every Repair.</span>
+                                            <span class="hero-title__line">Quality in</span>
+                                            <span class="hero-title__line">Every Finish.</span>
+                                        </h3>
                                     </div>
                                     <div class="hero__text-3">
-                                        <p class="hero__text-animation">Trusted Home Improvement and Reconstruction services in Calgary and surrounding areas.  .</p>
-                                        
-
-
-
+                                        <p class="hero__text-animation">Trusted Home Improvement and Reconstruction services in Calgary and surrounding areas.</p>
                                     </div>
+                                    
+                        
                                     
                                     
                                     <div class="scroll-down">
@@ -162,42 +164,8 @@
                 
 
 
-                <!-- Brand area start -->
-                <section class="brand__area">
-                    <div class="container pt-140 pb-140">
-                        <div class="row">
-                            <div class="col-xxl-12">
-                                <h2 class="brand__title-3 title-anim">Our work with the world's largest companies
-                                </h2>
-                                <div class="brand__list-3">
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/1.png" alt="Brand Logo">
-                                    </div>
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/2.png" alt="Brand Logo">
-                                    </div>
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/3.png" alt="Brand Logo">
-                                    </div>
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/4.png" alt="Brand Logo">
-                                    </div>
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/5.png" alt="Brand Logo">
-                                    </div>
-                                    <div class="brand__item-2 fade_bottom">
-                                        <img src="assets/imgs/brand/6.png" alt="Brand Logo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Brand area end -->
-
-
                 <!-- About area start -->
-                <section class="about__area-3">
+                <section class="about__area-3" id="home-restoration">
                     <div class="container pt-140 pb-110">
                         <div class="row">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
@@ -526,7 +494,7 @@
                                     </div>
                                     <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
                                         <div class="counter__img-3 counter__img-3--full">
-                                            <img src="assets/imgs/service/3/img1.jpeg" alt="Primera Restoration - Calgary">
+                                            <img src="assets/imgs/about/1/home3.jpeg" alt="Primera Restoration - Calgary">
                                         </div>
                                     </div>
                                 </div>
@@ -696,7 +664,7 @@
                                     <h3 class="sub-title-anim-top animation__word_come">We're here to help! <br>Contact us today</h3>
                                     <ul>
                                         <li><a href="tel:14037077617">403-707-7617</a></li>
-                                        <li><a href="mailto:primera@gmail.com">primera@gmail.com</a></li>
+                                        <li><a href="mailto:primerayyc@gmail.com">primerayyc@gmail.com</a></li>
                                         <li><span>Calgary,<br> Alberta, Canada</span></li>
                                     </ul>
                                 </div>
@@ -767,6 +735,31 @@
     <script src="assets/js/vanilla-tilt.js"></script>
     <script src="assets/js/jquery.meanmenu.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        (function () {
+            var trigger = document.querySelector('[data-scroll-target="#home-restoration"]');
+            if (!trigger) return;
+            trigger.addEventListener("click", function (e) {
+                e.preventDefault();
+                var target = document.querySelector("#home-restoration");
+                if (!target) return;
+                // If ScrollSmoother is enabled on the page, use it so scrolling stays consistent.
+                try {
+                    if (typeof ScrollSmoother !== "undefined" && ScrollSmoother.get) {
+                        var smoother = ScrollSmoother.get();
+                        if (smoother && smoother.scrollTo) {
+                            smoother.scrollTo(target, true, "top top");
+                            return;
+                        }
+                    }
+                } catch (err) {
+                    /* noop */
+                }
+
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+        })();
+    </script>
 
 </body>
 

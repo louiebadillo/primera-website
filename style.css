@@ -213,11 +213,100 @@ html {
     padding: 0;
 }
 
+/* renovation.html — “Explore our projects” CTA: pill link to gallery (not circular wc-btn) */
+.page-renovation .cta__area .btn_wrapper {
+    margin-top: 0.5rem;
+}
+.page-renovation .cta__gallery-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.85rem;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.2;
+    text-decoration: none;
+    color: #111;
+    background: #e1ac00;
+    border: 2px solid #e1ac00;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.page-renovation .cta__gallery-link i {
+    font-size: 0.9em;
+    transform: none;
+    padding-left: 0;
+}
+.page-renovation .cta__gallery-link:hover {
+    background: #111;
+    color: #e1ac00;
+    border-color: #111;
+    transform: translateY(-2px);
+}
+
 /* Hero tagline - bigger */
 .hero__area-3 .hero__text-3 p,
 .hero__area-3 .hero__text-animation {
     font-size: 22px;
     line-height: 1.5;
+}
+
+/* index.html — hero readability + mobile tuning */
+.page-home .hero__area-3 .sec-title.title-left {
+    margin-top: 56px;
+    font-size: clamp(40px, 5.6vw, 72px);
+    line-height: 1.05;
+}
+.page-home .hero__area-3 .hero-title__line {
+    display: inline;
+}
+.page-home .hero__area-3 .hero__text-animation {
+    margin-top: 14px;
+    max-width: 46ch;
+    font-size: clamp(18px, 2.2vw, 24px);
+    line-height: 1.45;
+    color: #2b1b5a; /* dark purple */
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.55);
+}
+@media (max-width: 767px) {
+    .page-home .hero__area-3 .sec-title.title-left {
+        margin-top: 34px;
+        font-size: 34px;
+        line-height: 1.08;
+        word-break: normal;
+        overflow-wrap: anywhere;
+    }
+    .page-home .hero__area-3 .hero-title__line {
+        display: block;
+    }
+    .page-home .hero__area-3 .hero__text-animation {
+        font-size: 18px;
+        max-width: none;
+    }
+    .page-home .hero__area-3 .hero__cta-panel {
+        margin-bottom: 18px;
+        padding: 14px 14px 16px;
+    }
+    .page-home .hero__area-3 .hero__cta {
+        font-size: 18px;
+        padding: 16px 22px;
+    }
+}
+
+/* Home hero: keep next section offscreen on load (mobile) */
+@media (max-width: 767px) {
+    .page-home .hero__area-3 {
+        min-height: 100svh;
+        padding-bottom: 56px;
+    }
+}
+
+/* Home hero arrow: show on mobile (master.css hides it) */
+@media (max-width: 767px) {
+    .page-home .hero__inner-3 .scroll-down {
+        display: block;
+        margin-top: 18px;
+    }
 }
 
 /* Hero "Restoration & Renovation" line - own class, smaller */
@@ -229,6 +318,79 @@ html {
     text-transform: uppercase;
     z-index: 2;
 }
+
+/* index.html hero CTAs */
+.hero__area-3 .hero__inner-3 {
+    display: flex;
+    flex-direction: column;
+}
+.hero__area-3 .hero__cta-panel {
+    margin-top: auto;
+    display: block;
+    width: 100%;
+    max-width: 980px;
+    padding: 18px 18px 22px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    margin-bottom: 28px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero__area-3 .hero__cta-label {
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: rgba(0, 0, 0, 0.78);
+}
+.hero__area-3 .hero__cta-row {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    align-items: center;
+}
+.hero__area-3 .hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 38px;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+.hero__area-3 .hero__cta:hover {
+    transform: translateY(-1px);
+}
+.hero__area-3 .hero__cta--primary {
+    background: #e1ac00;
+    border: 3px solid #e1ac00;
+    color: #111;
+}
+.hero__area-3 .hero__cta--primary:hover {
+    background: #111;
+    border-color: #111;
+    color: #e1ac00;
+}
+.hero__area-3 .hero__cta--secondary {
+    background: #e1ac00;
+    border: 3px solid #e1ac00;
+    color: #111;
+}
+.hero__area-3 .hero__cta--secondary:hover {
+    background: #111;
+    border-color: #111;
+    color: #e1ac00;
+}
 @media (max-width: 991px) {
     .hero__area-3 .hero__restoration-tagline { font-size: 18px; }
 }
@@ -239,6 +401,7 @@ html {
 /* Hero "PRIMERA" title - smaller */
 .hero__area-3 .sec-title.title-left {
     font-size: 200px;
+    margin-top: 40px;
 }
 @media (max-width: 1919px) {
     .hero__area-3 .sec-title.title-left { font-size: 170px; }
@@ -254,6 +417,12 @@ html {
 }
 @media (max-width: 767px) {
     .hero__area-3 .sec-title.title-left { font-size: 56px; }
+}
+@media (max-width: 991px) {
+    .hero__area-3 .sec-title.title-left { margin-top: 28px; }
+}
+@media (max-width: 767px) {
+    .hero__area-3 .sec-title.title-left { margin-top: 20px; }
 }
 
 /* About section - larger body text */
@@ -337,6 +506,77 @@ html {
 /* Header: hide menu (hamburger) icon on large screens – desktop nav is visible */
 @media (min-width: 1200px) {
     .header__nav-icon-3 {
+        display: none !important;
+    }
+}
+
+/* Simple mobile dropdown menu (replaces offcanvas) */
+.header__area-3 {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+}
+.mobile-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    padding: 10px;
+    line-height: 0;
+}
+.mobile-menu-toggle img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    display: block;
+}
+.mobile-menu-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    transform-origin: top;
+    transform: translateY(-6px);
+    opacity: 0;
+    transition: opacity 160ms ease, transform 160ms ease;
+}
+.mobile-menu-panel.is-open {
+    opacity: 1;
+    transform: translateY(0);
+}
+.mobile-menu-panel__nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px 16px;
+}
+.mobile-menu-panel__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+}
+.mobile-menu-panel__list a {
+    display: block;
+    padding: 12px 10px;
+    border-radius: 10px;
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+}
+.mobile-menu-panel__list a:hover {
+    background: rgba(225, 172, 0, 0.14);
+    color: #111;
+}
+@media (min-width: 1200px) {
+    .mobile-menu-panel {
         display: none !important;
     }
 }
@@ -704,16 +944,37 @@ html {
     display: block;
 }
 
-/* Footer logo: larger than header logo */
+/* Footer logo */
 .navigation__logo-footer .primera-logo {    
-    height: 100px; 
+    height: 72px;
     max-width: none;   /* remove the 160px cap for footer */
+}
+@media (max-width: 767px) {
+    .navigation__logo-footer .primera-logo {
+        height: 62px;
+    }
 }
 
 .navigation__logo-header .primera-logo {
     height: 68px;
     max-width: none;
     margin-left: 60px;
+}
+
+/* Mobile header: logo left, hamburger right */
+@media (max-width: 1199px) {
+    .header__inner-3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+    .header__logo-2 {
+        margin-right: auto;
+    }
+    .navigation__logo-header .primera-logo {
+        margin-left: 0;
+    }
 }
 
 /* application.html – hero section */
@@ -826,6 +1087,168 @@ html {
     display: block;
 }
 
+/* Gallery cards (ul/li/figure/figcaption layout like your example) */
+.gallery__section .before-after-category__grid.portfolio__list-1 {
+    /* gridEl holds a <ul>, so keep container neutral */
+    display: block !important;
+}
+
+.gallery__section ul.gallery-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+@media (max-width: 575px) {
+    .gallery__section ul.gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gallery__section .gallery-grid__link {
+    display: block;
+    text-decoration: none;
+    outline: none;
+}
+
+.gallery__section .gallery-grid__figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #2a2a2a;
+}
+
+.gallery__section .gallery-grid__figure::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 0, 0, 0.5);
+    transform-origin: center;
+    opacity: 0;
+    transform: scale(2);
+    transition: opacity 300ms;
+}
+
+.gallery__section .gallery-grid__img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 1000ms;
+}
+
+.gallery__section .gallery-grid__caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.15rem;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 600ms, transform 600ms;
+}
+
+.gallery__section .gallery-grid__link:is(:hover, :focus) .gallery-grid__figure::after {
+    opacity: 1;
+}
+
+.gallery__section .gallery-grid__link:is(:hover, :focus) .gallery-grid__caption {
+    opacity: 1;
+    transition: opacity 600ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .gallery__section .gallery-grid__caption {
+        transform: translate3d(0, 2rem, 0);
+    }
+
+    .gallery__section .gallery-grid__figure::after {
+        border-radius: 50%;
+        opacity: 1;
+        transform: scale(0);
+        transition: transform 900ms;
+    }
+
+    .gallery__section .gallery-grid__link:is(:hover, :focus) .gallery-grid__figure::after {
+        transform: scale(2.5);
+    }
+
+    .gallery__section .gallery-grid__link:is(:hover, :focus) .gallery-grid__caption {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        transition: opacity 600ms 400ms, transform 600ms 400ms;
+    }
+
+    .gallery__section .gallery-grid__link:is(:hover, :focus) .gallery-grid__img {
+        transform: scale(1.2);
+    }
+}
+
+/* Inline swipe styles removed (swipe is inside lightbox now). */
+
+.gallery__section .before-after-grid__thumb {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery__section .before-after-grid__item:hover .before-after-grid__thumb {
+    transform: scale(1.02);
+    transition: transform 0.35s ease;
+}
+
+.gallery__section .before-after-grid__media .before-after-grid__ribbon.portfolio__info {
+    width: 100% !important;
+    max-width: none !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    top: auto !important;
+    position: absolute !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    border-radius: 0;
+    padding: 18px 14px 14px;
+    margin: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.88) 0%,
+        rgba(0, 0, 0, 0.45) 45%,
+        transparent 100%
+    );
+    text-align: left;
+}
+
+.gallery__section .before-after-grid__ribbon .portfolio__title {
+    color: #fff !important;
+    font-size: 1rem !important;
+    line-height: 1.25;
+    margin: 0 0 4px;
+}
+
+.gallery__section .before-after-grid__ribbon p {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 13px !important;
+    line-height: 1.35;
+    margin: 0 !important;
+}
+
 /* application.html – gallery: reduce gap between last gallery row and Get a Free Quote button */
 .gallery__section .row_bottom {
     margin-top: 2.5rem;
@@ -839,6 +1262,446 @@ html {
     max-width: 150%;
     height: auto;
     object-fit: cover;
+}
+
+/* Gallery intro (application.html) — single column copy, no SplitText jank */
+.gallery-intro .about__content.gallery-intro__lead {
+    padding-top: 48px;
+}
+@media only screen and (max-width: 767px) {
+    .gallery-intro .about__content.gallery-intro__lead {
+        padding-top: 28px;
+    }
+    .gallery-intro .about__content.gallery-intro__lead p {
+        max-width: none;
+    }
+
+    /* application.html (gallery) — prevent fixed navbar overlap */
+    .page-application .gallery-intro .container.pt-140 {
+        padding-top: 190px !important;
+    }
+
+    /* Gallery intro (mobile): disable animations that cause layout drift */
+    .page-application .gallery-intro .title-anim,
+    .page-application .gallery-intro .text-anim,
+    .page-application .gallery-intro .img-anim,
+    .page-application .gallery-intro .fade_left,
+    .page-application .gallery-intro .fade_right,
+    .page-application .gallery-intro .fade_bottom,
+    .page-application .gallery-intro .fade_top {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+        will-change: auto !important;
+    }
+}
+
+.gallery__before-after .gallery__before-after-sub {
+    font-size: 18px;
+    line-height: 1.45;
+    color: #e1ac00;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin: 0 auto 1.5rem;
+    max-width: 720px;
+    text-align: center;
+}
+/* Gallery helper line under first category title */
+.page-application .gallery__helper {
+    margin: 10px 0 0;
+    max-width: none;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.35;
+}
+@media (max-width: 767px) {
+    .gallery__before-after .gallery__before-after-sub {
+        font-size: 16px;
+        margin-bottom: 1rem;
+        padding: 0 12px;
+    }
+    .page-application .gallery__helper {
+        margin-top: 8px;
+        padding: 0;
+    }
+}
+
+.before-after-root,
+.before-after-category-root {
+    min-height: 80px;
+}
+
+.gallery__before-after-intro .gallery__before-after-sub code {
+    font-size: 0.88em;
+    word-break: break-all;
+}
+
+/* (helper line moved under Basement suites title) */
+
+/* Deep link from renovation CTA — anchor clears fixed header */
+.page-application #gallery {
+    scroll-margin-top: 120px;
+}
+@media (max-width: 767px) {
+    .page-application #gallery {
+        scroll-margin-top: 100px;
+    }
+}
+
+/* about.html — CSS grid photo gallery (scoped) */
+.about-photo-gallery-layout {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: 18px;
+    align-items: start;
+}
+.about-photo-gallery-sidebar {
+    background: #1d1d29;
+    color: #fff;
+    border-radius: 16px;
+    min-height: 100%;
+}
+.about-photo-gallery-logo {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    line-height: 1.5;
+    padding-top: 12px;
+}
+.about-photo-gallery-main {
+    padding: 0;
+}
+.about-photo-gallery-title {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    margin: 0 0 14px;
+}
+
+/* Photo Gallery */
+.about-photo-gallery.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    grid-auto-rows: 12.5rem;
+    grid-auto-flow: dense;
+    gap: 0.75rem;
+}
+.about-photo-gallery.gallery figure {
+    container: figure / inline-size;
+    overflow: hidden;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+    background: #fff;
+}
+.about-photo-gallery.gallery img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    grid-area: 1 / 1 / -1 / -1;
+    transition: transform 0.9s ease;
+    transform: scale(1);
+    vertical-align: top;
+}
+.about-photo-gallery.gallery figure:hover img {
+    transform: scale(1.08);
+}
+.about-photo-gallery.gallery figcaption {
+    grid-area: 1 / 1 / -1 / -1;
+    align-self: end;
+    z-index: 1;
+    padding: 3em 15% 1em 1em;
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.3;
+    background: linear-gradient(transparent 25%, rgb(0 0 0 / 0.75));
+    display: none;
+}
+@container figure (width > 20rem) {
+    .about-photo-gallery.gallery figcaption {
+        display: block;
+    }
+}
+.about-photo-gallery.gallery figcaption h3 {
+    font-size: 1.0625rem;
+}
+.about-photo-gallery.gallery figcaption p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@media (width > 600px) {
+    .about-photo-gallery.gallery figure:nth-child(1) {
+        grid-area: span 2 / span 2;
+    }
+    .about-photo-gallery.gallery figure:nth-child(4n + 1) {
+        grid-row: span 2;
+    }
+    .about-photo-gallery.gallery figure:nth-child(4n + 2) {
+        grid-column: span 2;
+    }
+}
+.about-photo-gallery-cta {
+    margin-top: 14px;
+}
+.about-photo-gallery-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #e1ac00;
+    color: #111;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid #e1ac00;
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+.about-photo-gallery-link:hover {
+    background: #111;
+    color: #e1ac00;
+    border-color: #111;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 767px) {
+    .about-photo-gallery-layout {
+        grid-template-columns: 1fr;
+    }
+    .about-photo-gallery-sidebar {
+        display: none;
+    }
+}
+
+/* about.html — workflow marquee gallery (images only; no borders/text) */
+.about-workflow-marquee {
+    padding: 10px 0 70px;
+}
+.about-workflow-marquee .marquee {
+    --space: 1.25rem;
+    --gap: var(--space);
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    transform: skewY(-3deg);
+}
+.about-workflow-marquee .marquee + .marquee {
+    margin-top: 18px;
+}
+.about-workflow-marquee .marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: aboutMarqueeScroll var(--duration, 60s) linear infinite;
+}
+.about-workflow-marquee .marquee--reverse .marquee__group {
+    animation-direction: reverse;
+    animation-delay: calc(var(--duration, 60s) / -2);
+}
+@media (prefers-reduced-motion: reduce) {
+    .about-workflow-marquee .marquee__group {
+        animation-play-state: paused;
+    }
+}
+.about-workflow-marquee .marquee__group img {
+    max-width: clamp(10rem, 1rem + 22vmin, 18rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+@keyframes aboutMarqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+.before-after-grid__item {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+/* Clicks must reach cards inside ScrollSmoother-transformed content */
+.gallery__section .portfolio__list-1 .portfolio__item.before-after-grid__item {
+    pointer-events: auto !important;
+}
+
+/* Legacy modal z-index overrides removed (lightbox replaces modal). */
+
+.before-after-grid__item:focus {
+    outline: 2px solid #a4f8ed;
+    outline-offset: 4px;
+}
+
+.before-after-grid__thumb {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.before-after-grid__empty {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 640px;
+    margin-top: 1rem;
+}
+
+.before-after-grid__empty code {
+    font-size: 0.9em;
+    word-break: break-all;
+}
+
+/* Lightbox (swipeable) — opaque white backdrop feel */
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 18px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+}
+
+.gallery-lightbox.is-open {
+    display: flex;
+}
+
+.gallery-lightbox__panel {
+    width: min(980px, 94vw);
+    max-height: 90vh;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    overflow: visible;
+}
+
+.gallery-lightbox__title {
+    margin: 0;
+    padding: 10px 64px 10px;
+    text-align: center;
+    font-size: clamp(1.05rem, 2.1vw, 1.45rem);
+    color: #111;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.gallery-lightbox__close {
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    background: rgba(255, 255, 255, 0.92);
+    color: #111;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    line-height: 1;
+    z-index: 100230;
+}
+
+.gallery-lightbox__swiper {
+    width: 100%;
+    padding: 0;
+}
+
+.gallery-lightbox__swiper .swiper-wrapper {
+    align-items: center;
+}
+
+.gallery-lightbox__figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.gallery-lightbox__figure img {
+    width: 100%;
+    max-height: min(68vh, 640px);
+    object-fit: contain;
+    border-radius: 14px;
+    background: transparent;
+    box-shadow: none;
+    filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.18));
+}
+
+.gallery-lightbox__figure figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.65);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.gallery-lightbox-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 100220;
+}
+.gallery-lightbox-control--prev { left: -56px; }
+.gallery-lightbox-control--next { right: -56px; }
+
+.gallery-lightbox-control-btn {
+    pointer-events: auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    background: rgba(255, 255, 255, 0.92);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+.gallery-lightbox-control-btn:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.gallery-lightbox-control-btn-icon svg {
+    width: 10px;
+    height: 18px;
+}
+.gallery-lightbox-control-btn-icon polyline {
+    stroke: rgba(0, 0, 0, 0.75);
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (max-width: 767px) {
+    .gallery-lightbox__panel {
+        width: 96vw;
+        border-radius: 0;
+    }
+    .gallery-lightbox__title {
+        padding: 16px 56px 8px;
+    }
+    .gallery-lightbox-control--prev { left: 10px; }
+    .gallery-lightbox-control--next { right: 10px; }
 }
 
 /* Footer – Contact Us section: form, contact info, social icons */
@@ -991,16 +1854,67 @@ html {
 }
 
 /* about.html – goal section image */
-.about-goal__img img {
-    width: 100%;
-    height: auto;
-    display: block;
+.about-goal__img {
     border-radius: 8px;
+    overflow: hidden;
+    background: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+.about-goal__img .about-goal__img-item {
+    width: calc(50% - 5px);
+    height: clamp(260px, 34vw, 440px);
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    background: transparent;
 }
 @media (max-width: 767px) {
     .about-goal__img {
         margin-bottom: 2rem;
     }
+    .about-goal__img .about-goal__img-item {
+        width: 100%;
+    }
+}
+
+/* about.html — “where to next” list (reuses service__list styles; no photos) */
+.about-toc {
+    margin-top: 48px;
+}
+.about__area-2 {
+    background-color: #e8e8e8;
+}
+.about-links-list .service__list-wrapper {
+    margin-top: 24px;
+}
+.about-links-list .service__img-wrapper,
+.about-links-list .service__img-wrapper span {
+    display: none !important;
+}
+
+/* about.html — improve contrast + brand hover for “Where to next” list */
+.about-links-list .sec-title-wrapper .sec-title,
+.about-links-list .service__top-text p {
+    color: #111;
+}
+.about-links-list .service__item {
+    border-bottom-color: rgba(0, 0, 0, 0.14);
+}
+.about-links-list .service__number span,
+.about-links-list .service__title,
+.about-links-list .service__text p,
+.about-links-list .service__link p {
+    color: rgba(0, 0, 0, 0.88);
+}
+.about-links-list .service__item:hover .service__number span,
+.about-links-list .service__item:hover .service__title,
+.about-links-list .service__item:hover .service__text p,
+.about-links-list .service__item:hover .service__link p {
+    color: #e1ac00 !important;
 }
 
 /* application.html – navbar white like other pages (not transparent over dark hero) */

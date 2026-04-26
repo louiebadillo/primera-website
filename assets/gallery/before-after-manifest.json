@@ -1,0 +1,230 @@
+{
+  "projects": [
+    {
+      "mode": "gallery",
+      "id": "basement-suites/Cougar-ridge",
+      "category": "basement-suites",
+      "title": "Cougar Ridge",
+      "photos": [
+        "assets/imgs/gallery/pairs/basement-suites/Cougar-ridge/cougarridge.jpg",
+        "assets/imgs/gallery/pairs/basement-suites/Cougar-ridge/cougarridge2.jpg",
+        "assets/imgs/gallery/pairs/basement-suites/Cougar-ridge/cougarridge3.jpg",
+        "assets/imgs/gallery/pairs/basement-suites/Cougar-ridge/cougarridge4.jpg"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "basement-suites/Creekstone",
+      "category": "basement-suites",
+      "title": "Creekstone",
+      "photos": [
+        "assets/imgs/gallery/pairs/basement-suites/Creekstone/1a4.jpg",
+        "assets/imgs/gallery/pairs/basement-suites/Creekstone/1a59d16c-b9d5-4edb-aae1-0558e7c3a0f6.jpg",
+        "assets/imgs/gallery/pairs/basement-suites/Creekstone/6a38c491-387e-4511-bbdf-db7c7ec92492.jpg",
+        "assets/imgs/gallery/pairs/basement-suites/Creekstone/7dd5efa6-7b82-48e0-93aa-d6e78442524c.jpg",
+        "assets/imgs/gallery/pairs/basement-suites/Creekstone/8b14ba6c-a928-421b-8792-029fd42decc5.jpg"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "basement-suites/Evanston",
+      "category": "basement-suites",
+      "title": "Evanston",
+      "photos": [
+        "assets/imgs/gallery/pairs/basement-suites/Evanston/evanston.jpg",
+        "assets/imgs/gallery/pairs/basement-suites/Evanston/evanston1.jpg",
+        "assets/imgs/gallery/pairs/basement-suites/Evanston/evanston3.jpg"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "basement-suites/Lewisburg",
+      "category": "basement-suites",
+      "title": "Lewisburg",
+      "photos": [
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg/IMG_81.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg/IMG_8853.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg/IMG_8854.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg/IMG_8855.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg/IMG_8858.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg/IMG_8862.JPG"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "basement-suites/Lewisburg-2",
+      "category": "basement-suites",
+      "title": "Lewisburg 2",
+      "photos": [
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/1aaaa.jpeg",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/6e2476d2-19d7-4a3f-b88e-eef1f46ff28a.jpg",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/B2AA5690-AD23-4637-935A-4D5960FA7602.jpg",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/IMG_8824.jpeg",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/IMG_8825.jpeg",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/IMG_8826.jpeg",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/IMG_8827.jpeg",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/IMG_8828.jpeg",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/IMG_8829.jpeg",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/IMG_8830.jpeg",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/IMG_8833.jpeg",
+        "assets/imgs/gallery/pairs/basement-suites/Lewisburg-2/IMG_8838.jpeg"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "basement-suites/Panorama",
+      "category": "basement-suites",
+      "title": "Panorama",
+      "photos": [
+        "assets/imgs/gallery/pairs/basement-suites/Panorama/IMG_1.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Panorama/IMG_3.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Panorama/IMG_32.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Panorama/IMG_7955.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Panorama/IMG_7956.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Panorama/IMG_7957.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Panorama/IMG_7958.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Panorama/IMG_7959.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Panorama/IMG_7960.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Panorama/IMG_7961.JPG",
+        "assets/imgs/gallery/pairs/basement-suites/Panorama/IMG_7962.JPG"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "bathroom/Bathroom-reno",
+      "category": "bathroom",
+      "title": "Bathroom Reno",
+      "photos": [
+        "assets/imgs/gallery/pairs/bathroom/Bathroom-reno/483509254_1069997071821254_2295184375747575065_n.jpg"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "bathroom/Chestermere-ensuite",
+      "category": "bathroom",
+      "title": "Chestermere Ensuite",
+      "photos": [
+        "assets/imgs/gallery/pairs/bathroom/Chestermere-ensuite/1111.JPG",
+        "assets/imgs/gallery/pairs/bathroom/Chestermere-ensuite/1112.JPG",
+        "assets/imgs/gallery/pairs/bathroom/Chestermere-ensuite/1113.jpeg",
+        "assets/imgs/gallery/pairs/bathroom/Chestermere-ensuite/1114.jpeg",
+        "assets/imgs/gallery/pairs/bathroom/Chestermere-ensuite/1115.jpeg",
+        "assets/imgs/gallery/pairs/bathroom/Chestermere-ensuite/1116.JPG"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "bathroom/Creekstone-bathroom",
+      "category": "bathroom",
+      "title": "Creekstone Bathroom",
+      "photos": [
+        "assets/imgs/gallery/pairs/bathroom/Creekstone-bathroom/6a38c491-387e-4511-bbdf-db7c7ec92492.JPG"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "feature-walls/Belmont-fireplace",
+      "category": "feature-walls",
+      "title": "Belmont Fireplace",
+      "photos": [
+        "assets/imgs/gallery/pairs/feature-walls/Belmont-fireplace/aaa.jpeg",
+        "assets/imgs/gallery/pairs/feature-walls/Belmont-fireplace/bbb.jpg",
+        "assets/imgs/gallery/pairs/feature-walls/Belmont-fireplace/ccc.jpg"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "feature-walls/Chestermere-fireplace",
+      "category": "feature-walls",
+      "title": "Chestermere Fireplace",
+      "photos": [
+        "assets/imgs/gallery/pairs/feature-walls/Chestermere-fireplace/aaaa.jpg",
+        "assets/imgs/gallery/pairs/feature-walls/Chestermere-fireplace/bbbb.JPEG"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "feature-walls/Movie-room",
+      "category": "feature-walls",
+      "title": "Movie Room",
+      "photos": [
+        "assets/imgs/gallery/pairs/feature-walls/Movie-room/483527306_1069997028487925_8734394995292512087_n.jpg"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "feature-walls/Wine-Bar",
+      "category": "feature-walls",
+      "title": "Wine Bar",
+      "photos": [
+        "assets/imgs/gallery/pairs/feature-walls/Wine-Bar/483510782_1069996688487959_4616037905892469860_n.jpg"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "flooring/chestermere-carpet",
+      "category": "flooring",
+      "title": "Chestermere Carpet",
+      "photos": [
+        "assets/imgs/gallery/pairs/flooring/chestermere-carpet/a111.jpeg",
+        "assets/imgs/gallery/pairs/flooring/chestermere-carpet/b112.jpeg"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "flooring/Shawnessy-vinyl-flooring-and-carpet",
+      "category": "flooring",
+      "title": "Shawnessy Vinyl Flooring And Carpet",
+      "photos": [
+        "assets/imgs/gallery/pairs/flooring/Shawnessy-vinyl-flooring-and-carpet/IMG_8754.jpeg",
+        "assets/imgs/gallery/pairs/flooring/Shawnessy-vinyl-flooring-and-carpet/IMG_8764.jpeg",
+        "assets/imgs/gallery/pairs/flooring/Shawnessy-vinyl-flooring-and-carpet/IMG_8768.jpeg"
+      ]
+    },
+    {
+      "mode": "pair",
+      "id": "kitchen/chestermere",
+      "category": "kitchen",
+      "title": "Chestermere",
+      "before": "assets/imgs/gallery/pairs/kitchen/chestermere/before.JPEG",
+      "after": "assets/imgs/gallery/pairs/kitchen/chestermere/after.JPEG"
+    },
+    {
+      "mode": "gallery",
+      "id": "kitchen/kitchen-1",
+      "category": "kitchen",
+      "title": "Kitchen 1",
+      "photos": [
+        "assets/imgs/gallery/pairs/kitchen/kitchen-1/469968206_1000541462100149_7538418097271956923_n.jpg"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "kitchen/Kitchen-reno",
+      "category": "kitchen",
+      "title": "Kitchen Reno",
+      "photos": [
+        "assets/imgs/gallery/pairs/kitchen/Kitchen-reno/483523839_1070000568487571_494226796526556278_n.jpg",
+        "assets/imgs/gallery/pairs/kitchen/Kitchen-reno/484352181_1070000395154255_5382928250782193576_n.jpg"
+      ]
+    },
+    {
+      "mode": "gallery",
+      "id": "kitchen/Kitchen-revamp",
+      "category": "kitchen",
+      "title": "Kitchen Revamp",
+      "photos": [
+        "assets/imgs/gallery/pairs/kitchen/Kitchen-revamp/474909013_1034621292025499_4516535727863253782_n.jpg",
+        "assets/imgs/gallery/pairs/kitchen/Kitchen-revamp/475380123_1034621425358819_3185480408495736246_n.jpg"
+      ]
+    },
+    {
+      "mode": "pair",
+      "id": "kitchen/shawnessy",
+      "category": "kitchen",
+      "title": "Shawnessy",
+      "before": "assets/imgs/gallery/pairs/kitchen/shawnessy/before.JPG",
+      "after": "assets/imgs/gallery/pairs/kitchen/shawnessy/after.jpg"
+    }
+  ]
+}
