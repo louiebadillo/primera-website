@@ -1508,15 +1508,19 @@ html {
 /* about.html — workflow marquee gallery (images only; no borders/text) */
 .about-workflow-marquee {
     padding: 10px 0 70px;
+    position: relative;
+    z-index: 2;
 }
 .about-workflow-marquee .marquee {
     --space: 1.25rem;
     --gap: var(--space);
     display: flex;
+    flex-wrap: nowrap;
     overflow: hidden;
     user-select: none;
     gap: var(--gap);
-    transform: skewY(-3deg);
+    width: 100%;
+    /* skewY was clipping the top row inside overflow:hidden (paint vs overflow box). */
 }
 .about-workflow-marquee .marquee + .marquee {
     margin-top: 18px;
@@ -1524,8 +1528,9 @@ html {
 .about-workflow-marquee .marquee__group {
     flex-shrink: 0;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     gap: var(--gap);
     min-width: 100%;
     animation: aboutMarqueeScroll var(--duration, 60s) linear infinite;
@@ -1540,7 +1545,10 @@ html {
     }
 }
 .about-workflow-marquee .marquee__group img {
+    flex-shrink: 0;
+    width: clamp(10rem, 1rem + 22vmin, 18rem);
     max-width: clamp(10rem, 1rem + 22vmin, 18rem);
+    height: auto;
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 1rem;
@@ -1838,6 +1846,28 @@ html {
 }
 .contact-app__form .btn-item:hover span {
     background-color: #E1AC00 !important;
+}
+
+/* Web3Forms inline feedback (fetch submit) */
+.web3forms-feedback {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 14px 16px;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 1.45;
+    outline: none;
+}
+.web3forms-feedback--success {
+    background: rgba(225, 172, 0, 0.12);
+    border: 1px solid rgba(225, 172, 0, 0.55);
+    color: #2a2418;
+}
+.web3forms-feedback--error {
+    background: rgba(180, 40, 40, 0.08);
+    border: 1px solid rgba(180, 40, 40, 0.35);
+    color: #5c1a1a;
 }
 
 /* about.html – team section background */

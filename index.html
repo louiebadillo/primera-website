@@ -176,7 +176,7 @@
                         <div class="row">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                                 <div class="about__img-3">
-                                    <img src="assets/imgs/about/3/waterrestoration.jpg" alt="About Thumbnail" data-speed="auto">
+                                    <img src="assets/imgs/service/3/repair.jpg" alt="About Thumbnail" data-speed="auto">
                                 </div>
                             </div>
 
@@ -677,13 +677,17 @@
                             </div>
                             <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
                                 <div class="contact__form">
-                                    <form action="assets/mail.php" method="POST">
+                                    <form action="https://api.web3forms.com/submit" method="POST">
+                                        <div class="web3forms-feedback" tabindex="-1" role="status" aria-live="polite" hidden></div>
+                                        <input type="hidden" name="access_key" value="a88f174c-9667-4e8a-a162-91845b0a8f2a">
+                                        <input type="hidden" name="from_name" value="Primera — Home">
+                                        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
                                         <div class="row g-3">
                                             <div class="col-xxl-6 col-xl-6 col-12">
-                                                <input type="text" name="name" placeholder="Name *">
+                                                <input type="text" name="name" placeholder="Name *" required autocomplete="name">
                                             </div>
                                             <div class="col-xxl-6 col-xl-6 col-12">
-                                                <input type="email" name="email" placeholder="Email *">
+                                                <input type="email" name="email" placeholder="Email *" required autocomplete="email">
                                             </div>
                                         </div>
                                         <div class="row g-3">
@@ -691,12 +695,12 @@
                                                 <input type="tel" name="phone" placeholder="Phone">
                                             </div>
                                             <div class="col-xxl-6 col-xl-6 col-12">
-                                                <input type="text" name="subject" placeholder="Subject *">
+                                                <input type="text" name="subject" placeholder="Subject *" required>
                                             </div>
                                         </div>
                                         <div class="row g-3">
                                             <div class="col-12">
-                                                <textarea name="message" placeholder="Messages *"></textarea>
+                                                <textarea name="message" placeholder="Messages *" required></textarea>
                                             </div>
                                         </div>
                                         <div class="row g-3">
@@ -741,6 +745,7 @@
     <script src="assets/js/vanilla-tilt.js"></script>
     <script src="assets/js/jquery.meanmenu.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/web3forms-submit.js"></script>
     <script>
         (function () {
             var trigger = document.querySelector('[data-scroll-target="#home-restoration"]');

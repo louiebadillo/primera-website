@@ -302,7 +302,12 @@
                                 </div>
                             </div>
                             <div class="col-xxl-8 col-xl-8 col-lg-7 col-md-6">
-                                <form class="contact-app__form" action="#" method="post">
+                                <form class="contact-app__form" action="https://api.web3forms.com/submit" method="POST">
+                                    <div class="web3forms-feedback" tabindex="-1" role="status" aria-live="polite" hidden></div>
+                                    <input type="hidden" name="access_key" value="a88f174c-9667-4e8a-a162-91845b0a8f2a">
+                                    <input type="hidden" name="from_name" value="Primera website — Gallery">
+                                    <input type="hidden" name="subject" value="Gallery page contact">
+                                    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
                                     <div class="row g-3">
                                         <div class="col-md-6">
                                             <input type="text" name="name" placeholder="Your Name" required>
@@ -433,6 +438,7 @@
     <script src="assets/js/jquery.meanmenu.min.js"></script>
     <script src="assets/js/gallery-before-after.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/web3forms-submit.js"></script>
 
 </body>
 
